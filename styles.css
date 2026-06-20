@@ -1,0 +1,796 @@
+/* ============================================
+   KEGEL HARD — CARLOS (45 anos)
+   Estética: Prospecto Executivo / Dossiê
+   ============================================ */
+
+:root {
+  --charcoal: #1A1A2E;
+  --gunmetal: #2A2A40;
+  --brushed-gold: #C9A84C;
+  --pearl: #EAEAE2;
+  --slate-gray: #7A7A8E;
+  --faded-red: #A0524A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--charcoal);
+  color: var(--pearl);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- TYPOGRAPHY ---- */
+
+h1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.gold {
+  color: var(--brushed-gold);
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brushed-gold);
+  margin-bottom: 12px;
+}
+
+/* ---- BUTTONS ---- */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+  background: var(--brushed-gold);
+  color: var(--charcoal);
+  padding: 18px 28px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 440px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(201, 168, 76, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-large {
+  font-size: 1.05rem;
+  padding: 20px 32px;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  padding: 48px 0 56px;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+
+.hero-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brushed-gold);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  color: var(--slate-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 560px;
+}
+
+.hero .btn-primary {
+  margin-bottom: 20px;
+}
+
+.micro-badges {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.micro-badges span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate-gray);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(122,122,142,0.2);
+}
+
+/* Metric cards (desktop sidebar) */
+.hero-metrics {
+  display: none;
+}
+
+.metric-card {
+  background: var(--gunmetal);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.metric-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--brushed-gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-gray);
+  line-height: 1.4;
+}
+
+/* ============================================
+   DIAGNOSIS (PAIN)
+   ============================================ */
+
+.diagnosis {
+  padding: 56px 0;
+  background: var(--gunmetal);
+}
+
+.diagnosis-card {
+  background: var(--charcoal);
+  border-top: 3px solid var(--brushed-gold);
+  border-radius: 0 0 8px 8px;
+  padding: 24px;
+  margin: 20px 0 28px;
+}
+
+.diagnosis-card p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.symptom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.symptom-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.symptom-marker {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--brushed-gold);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.symptom-item strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.symptom-item p {
+  font-size: 0.875rem;
+  color: var(--slate-gray);
+  line-height: 1.5;
+}
+
+/* ============================================
+   MECHANISM
+   ============================================ */
+
+.mechanism {
+  padding: 56px 0;
+}
+
+.mechanism-text {
+  margin-bottom: 32px;
+}
+
+.mechanism-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 14px;
+  color: var(--pearl);
+}
+
+.mechanism-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Metric Bars */
+.metric-bar-section {
+  margin-bottom: 32px;
+}
+
+.metric-bar-item {
+  margin-bottom: 20px;
+}
+
+.metric-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.metric-bar-header span:first-child {
+  font-size: 0.85rem;
+  color: var(--slate-gray);
+}
+
+.metric-bar-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--brushed-gold);
+}
+
+.metric-bar-track {
+  width: 100%;
+  height: 6px;
+  background: var(--gunmetal);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.metric-bar-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--brushed-gold), #D4B65A);
+  border-radius: 3px;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Study card */
+.study-card {
+  background: var(--gunmetal);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.study-source {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brushed-gold);
+  margin-bottom: 12px;
+}
+
+.study-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--slate-gray);
+}
+
+.study-card strong {
+  color: var(--pearl);
+}
+
+/* ============================================
+   PROTOCOL (SOLUTION)
+   ============================================ */
+
+.protocol {
+  padding: 56px 0;
+  background: var(--gunmetal);
+}
+
+.protocol-intro {
+  color: var(--slate-gray);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.protocol-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(201,168,76,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.protocol-row {
+  display: flex;
+  gap: 16px;
+  background: var(--charcoal);
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.protocol-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--brushed-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.protocol-content strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.protocol-content p {
+  font-size: 0.875rem;
+  color: var(--slate-gray);
+  line-height: 1.5;
+}
+
+/* ============================================
+   RESULTS / PROOF
+   ============================================ */
+
+.results {
+  padding: 56px 0;
+}
+
+.testimonial {
+  background: var(--gunmetal);
+  border-radius: 8px;
+  padding: 28px 24px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.testimonial-quote {
+  font-size: 2.5rem;
+  color: var(--brushed-gold);
+  line-height: 1;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.testimonial > p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  font-style: italic;
+  color: var(--pearl);
+  margin-bottom: 20px;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.12);
+  color: var(--brushed-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.testimonial-footer strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.testimonial-footer span {
+  font-size: 0.75rem;
+  color: var(--slate-gray);
+}
+
+.results-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.result-box {
+  background: var(--gunmetal);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.result-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--brushed-gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.result-desc {
+  font-size: 0.8rem;
+  color: var(--slate-gray);
+}
+
+.trust-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--pearl);
+}
+
+/* ============================================
+   INVESTMENT (OFFER)
+   ============================================ */
+
+.investment {
+  padding: 56px 0;
+  background: var(--gunmetal);
+  text-align: center;
+}
+
+.investment-box {
+  background: var(--charcoal);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.investment-comparison {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.comparison-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(122,122,142,0.1);
+}
+
+.comparison-item.faded {
+  opacity: 0.5;
+}
+
+.comparison-label {
+  font-size: 0.85rem;
+}
+
+.comparison-price {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--slate-gray);
+}
+
+.comparison-divider {
+  height: 1px;
+  background: var(--brushed-gold);
+  opacity: 0.3;
+  margin: 4px 0;
+}
+
+.highlight-item {
+  opacity: 1 !important;
+}
+
+.highlight-item .comparison-label {
+  font-weight: 700;
+  color: var(--pearl);
+}
+
+.gold-price {
+  font-size: 1.2rem !important;
+  color: var(--brushed-gold) !important;
+  font-weight: 700;
+}
+
+.price-was {
+  font-size: 0.9rem;
+  color: var(--slate-gray);
+  margin-bottom: 20px;
+}
+
+.price-was s {
+  color: var(--faded-red);
+}
+
+.investment .btn-primary {
+  margin: 0 auto 16px;
+}
+
+.investment-note {
+  font-size: 0.8rem;
+  color: var(--slate-gray);
+}
+
+/* ============================================
+   GUARANTEE
+   ============================================ */
+
+.guarantee {
+  padding: 56px 0;
+}
+
+.guarantee-box {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.guarantee-box svg {
+  margin-bottom: 16px;
+}
+
+.guarantee-box h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.guarantee-box p {
+  font-size: 0.9rem;
+  color: var(--slate-gray);
+  line-height: 1.7;
+}
+
+/* ============================================
+   FINAL CTA
+   ============================================ */
+
+.final-cta {
+  padding: 64px 0;
+  background: linear-gradient(180deg, var(--gunmetal) 0%, var(--charcoal) 100%);
+  text-align: center;
+}
+
+.final-cta h2 {
+  font-size: 1.375rem;
+  margin-bottom: 12px;
+}
+
+.final-cta p {
+  color: var(--slate-gray);
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+.final-cta .btn-primary {
+  margin: 0 auto 20px;
+}
+
+.final-details {
+  font-size: 0.8rem;
+  color: var(--slate-gray);
+}
+
+.final-details span {
+  font-weight: 600;
+  color: var(--pearl);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid rgba(122,122,142,0.1);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.75rem;
+  color: var(--slate-gray);
+  margin-bottom: 4px;
+}
+
+.footer-disclaimer {
+  font-size: 0.65rem;
+  opacity: 0.6;
+}
+
+/* ============================================
+   DESKTOP (768px+)
+   ============================================ */
+
+@media (min-width: 768px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 72px 0 80px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .hero-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 40px;
+  }
+
+  /* Diagnosis */
+  .diagnosis {
+    padding: 72px 0;
+  }
+
+  .symptom-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .symptom-list .symptom-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+  }
+
+  /* Mechanism */
+  .mechanism {
+    padding: 72px 0;
+  }
+
+  /* Protocol */
+  .protocol {
+    padding: 72px 0;
+  }
+
+  /* Results */
+  .results {
+    padding: 72px 0;
+  }
+
+  .results-metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trust-row {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  /* Investment */
+  .investment {
+    padding: 72px 0;
+  }
+
+  /* Guarantee */
+  .guarantee {
+    padding: 72px 0;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    padding: 88px 0;
+  }
+
+  .final-cta h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ============================================
+   LARGE DESKTOP (1200px+)
+   ============================================ */
+
+@media (min-width: 1200px) {
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 280px;
+    gap: 56px;
+  }
+}
